@@ -62,6 +62,7 @@ RUN ./configure \
     --with-gd \
     --enable-ctype \
     --enable-pdo \
+    --enable-tokenizer \
     --with-mysqli=mysqlnd \
     --with-pdo-mysql=mysqlnd \
     --enable-gd-native-ttf \
