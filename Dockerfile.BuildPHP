@@ -24,6 +24,7 @@ RUN apt-get update && apt-get install -y \
 	libgmp-dev \
 	libpspell-dev \
 	librecode-dev \
+	pkg-config \
 	php-mysql
 
 RUN git clone -b $PHP_VERSION https://github.com/php/php-src /php-src/
