@@ -60,6 +60,7 @@ RUN ./configure \
     --with-iconv \
     --with-gmp \
     --with-gd \
+    --with-openssl \
     --enable-ctype \
     --enable-pdo \
     --enable-tokenizer \
