@@ -62,6 +62,8 @@ RUN ./configure \
     --with-iconv \
     --with-gmp \
     --with-gd \
+    --with-pcre-regex \
+    --with-xml \
     --enable-ctype \
     --enable-pdo \
     --enable-tokenizer \
