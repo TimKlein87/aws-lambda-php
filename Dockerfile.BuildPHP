@@ -64,6 +64,7 @@ RUN ./configure \
     --with-gd \
     --with-pcre-regex \
     --with-xml \
+    --with-openssl=/usr/local \
     --enable-ctype \
     --enable-pdo \
     --enable-tokenizer \
