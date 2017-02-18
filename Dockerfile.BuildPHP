@@ -25,7 +25,8 @@ RUN apt-get update && apt-get install -y \
 	libpspell-dev \
 	librecode-dev \
 	pkg-config \
-	php-mysql
+	php-mysql \
+	libssl1.0.0
 
 RUN git clone -b $PHP_VERSION https://github.com/php/php-src /php-src/
 
