@@ -63,7 +63,7 @@ RUN ./configure \
     --with-gmp \
     --with-gd \
     --with-pcre-regex \
-    --with-openssl \
+    --with-openssl=$HOME/php7/usr/etc \
     --enable-ctype \
     --enable-pdo \
     --enable-tokenizer \
