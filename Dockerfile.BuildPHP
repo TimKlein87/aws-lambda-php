@@ -63,7 +63,7 @@ RUN ./configure \
     --with-gmp \
     --with-gd \
     --with-pcre-regex \
-    --with-openssl=/usr/include/openssl \
+    --with-openssl \
     --enable-ctype \
     --enable-pdo \
     --enable-tokenizer \
