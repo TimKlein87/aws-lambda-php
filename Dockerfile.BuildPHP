@@ -73,9 +73,9 @@ RUN ./configure \
     --enable-gd-native-ttf \
     --enable-gd-jis-conv \
     --libdir=/usr/lib64 \
-    --disable-all
-#    --disable-opcache \
-#    --disable-cgi
+#    --disable-all
+    --disable-opcache \
+    --disable-cgi
 
 RUN make
 
