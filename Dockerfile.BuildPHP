@@ -58,7 +58,7 @@ RUN ./configure \
     --enable-sysvshm \
     --enable-json \
     --enable-hash \
-    --enable-xml \
+    --enable-libxml \
     --with-curl \
     --with-iconv \
     --with-gmp \
