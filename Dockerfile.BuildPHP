@@ -71,7 +71,8 @@ RUN ./configure \
     --with-pdo-mysql=mysqlnd \
     --enable-gd-native-ttf \
     --enable-gd-jis-conv \
-    --libdir=/usr/lib64 \
+ #   --libdir=/usr/lib64 \
+    --with-libdir=lib64 \
     --disable-all
 #    --disable-opcache \
 #    --disable-cgi
