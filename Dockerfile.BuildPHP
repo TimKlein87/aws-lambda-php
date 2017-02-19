@@ -64,7 +64,6 @@ RUN ./configure \
     --with-gmp \
     --with-gd \
     --with-pcre-regex \
-    --with-openssl \
     --enable-ctype \
     --enable-pdo \
     --enable-tokenizer \
