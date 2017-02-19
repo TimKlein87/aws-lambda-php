@@ -47,6 +47,7 @@ RUN ./configure \
     --with-config-file-path=$HOME/php7/usr/etc \
     --without-pear \
     --enable-shared=no	\
+    --disable-shared \
     --enable-static=yes	\
     --enable-mbstring \
     --enable-zip \
