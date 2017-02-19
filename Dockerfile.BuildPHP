@@ -60,7 +60,6 @@ RUN ./configure \
     --enable-hash \
     --enable-xml \
     --enable-libxml \
-    --enable-curl \
 #    --with-curl \
     --with-iconv \
     --with-gmp \
