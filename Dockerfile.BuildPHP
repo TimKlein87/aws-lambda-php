@@ -31,6 +31,7 @@ RUN ./configure \
     --enable-hash \
     --enable-xml \
     --enable-libxml \
+    --enable-simplexml \
     --enable-dom \
     --enable-filter \
     --with-curl \
@@ -45,6 +46,7 @@ RUN ./configure \
     --enable-gd-native-ttf \
     --enable-gd-jis-conv \
     --with-openssl \
-    --without-pear
+    --without-pear \
+    --with-libxml-dir=/usr/bin/xml2-config
 
 RUN make -j 5
