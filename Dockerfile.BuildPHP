@@ -34,6 +34,7 @@ RUN ./configure \
     --enable-simplexml \
     --enable-dom \
     --enable-filter \
+    --enable-ftp \
     --with-curl \
     --with-iconv \
     --with-gd \
