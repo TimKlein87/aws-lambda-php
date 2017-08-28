@@ -30,6 +30,7 @@ RUN ./configure \
     --enable-json \
     --enable-hash \
     --enable-xml \
+    --enable-xmlwriter \
     --enable-libxml \
     --enable-simplexml \
     --enable-dom \
