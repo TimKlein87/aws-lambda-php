@@ -9,9 +9,9 @@ RUN yum install autoconf automake libtool bison re2c libxml2-devel openssl-devel
 
 RUN curl -sL https://github.com/php/php-src/archive/php-7.1.8.tar.gz | tar -zxv
 
-WORKDIR /php-src-php-7.1.8
+# WORKDIR /php-src-php-7.1.8
 
-RUN ./buildconf --force
+RUN cd /php-src-php-7.1.8 && ./buildconf --force
 
 RUN ./configure \
     --enable-static=yes \
