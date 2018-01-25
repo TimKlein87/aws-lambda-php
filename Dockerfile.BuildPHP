@@ -1,7 +1,7 @@
 # Compile PHP with static linked dependencies
 # to create a single running binary
 
-FROM amazonlinux
+FROM lambci/lambda-base
 
 ARG PHP_VERSION
 
