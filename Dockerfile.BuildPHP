@@ -1,19 +1,19 @@
 # Compile PHP with static linked dependencies
 # to create a single running binary
 
-FROM lambci/lambda-base
+FROM amazonlinux
 
 ARG PHP_VERSION
 
-RUN yum install autoconf automake libtool bison re2c libxml2-devel curl-devel libpng-devel -y; exit 0
+RUN yum install autoconf automake libtool bison re2c libxml2-devel openssl-devel yum install curl-devel libpng-devel -y
 
-RUN curl -sL https://github.com/php/php-src/archive/php-7.1.8.tar.gz | tar -zxv
+RUN curl -sL https://github.com/php/php-src/archive/$PHP_VERSION.tar.gz | tar -zxv
 
-# WORKDIR /php-src-php-7.1.8
+WORKDIR /php-src-$PHP_VERSION
 
-RUN cd php-src-php-7.1.8 && ./buildconf --force
+RUN ./buildconf --force
 
-RUN cd php-src-php-7.1.8 && ./configure \
+RUN ./configure \
     --enable-static=yes \
     --enable-shared=no \
     --disable-all \
@@ -50,4 +50,4 @@ RUN cd php-src-php-7.1.8 && ./configure \
     --without-pear \
     --with-libxml-dir=/usr/bin/xml2-config
 
-RUN cd php-src-php-7.1.8 && make -j 5
+RUN make -j 5
