@@ -5,7 +5,7 @@ FROM lambci/lambda-base
 
 ARG PHP_VERSION
 
-RUN yum install autoconf automake libtool bison re2c libxml2-devel openssl-devel curl-devel libpng-devel -y; exit 0
+RUN yum install autoconf automake libtool bison re2c libxml2-devel curl-devel libpng-devel -y; exit 0
 
 RUN curl -sL https://github.com/php/php-src/archive/php-7.1.8.tar.gz | tar -zxv
 
