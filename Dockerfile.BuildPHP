@@ -5,7 +5,27 @@ FROM amazonlinux
 
 ARG PHP_VERSION
 
-RUN yum install autoconf automake libtool bison re2c libxml2-devel openssl-devel yum install curl-devel libpng-devel -y
+RUN yum install \
+    autoconf \
+    automake \
+    libtool \
+    bison \
+    re2c \
+    libxml2-devel \
+#    openssl-devel \
+    curl-devel \
+    libpng-devel -y
+    
+# Install an older version of OpenSSL until Amazon updates the lambda image. 
+RUN curl -sL http://www.openssl.org/source/openssl-1.0.1k.tar.gz | tar -zxv
+
+WORKDIR /openssl-1.0.1k
+
+RUN ./config
+RUN make
+RUN make install
+
+WORKDIR /
 
 RUN curl -sL https://github.com/php/php-src/archive/$PHP_VERSION.tar.gz | tar -zxv
 
