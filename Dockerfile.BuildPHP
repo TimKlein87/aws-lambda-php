@@ -14,6 +14,7 @@ RUN yum install \
     libxml2-devel \
 #    openssl-devel \
     curl-devel \
+    gzip \
     libpng-devel -y
     
 # Install an older version of OpenSSL until Amazon updates the lambda image. 
