@@ -37,6 +37,7 @@ RUN ./configure \
     --enable-static=yes \
     --enable-shared=no \
     --disable-all \
+    --enable-session \
     --enable-mbstring \
     --enable-soap \
     --enable-zip \
