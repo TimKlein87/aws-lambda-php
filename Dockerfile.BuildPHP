@@ -17,6 +17,9 @@ RUN yum install \
     gzip \
     libpng-devel -y
     
+RUN yum groupinstall "Development Tools"
+RUN yum groupinstall "Development Libraries"
+    
 # Install an older version of OpenSSL until Amazon updates the lambda image. 
 RUN curl -sL http://www.openssl.org/source/openssl-1.0.1k.tar.gz | tar -zxv
 
